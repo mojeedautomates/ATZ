@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="darkreader-lock">
+<title>ATZ Vitalz Medical Center | Comprehensive Patient-Centered Care</title>
+<meta name="description" content="ATZ Vitalz Medical Center provides compassionate, patient-centered healthcare across a range of medical services. Contact our team or request an appointment today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0F4C5C;
+  --secondary:#2A7F8E;
+  --accent:#5FB3B3;
+  --bg-light:#F3F8F9;
+  --white:#FFFFFF;
+  --text:#17343B;
+  --text-soft:#4C6870;
+  --border:#DCE9EA;
+  --radius-s:8px;
+  --radius-m:14px;
+  --shadow:0 6px 24px rgba(15,76,92,0.08);
+  --shadow-soft:0 2px 10px rgba(15,76,92,0.06);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;color-scheme:light;background:#FFFFFF;overflow-x:hidden;}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  background:#FFFFFF;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  width:100%;
+}
+h1,h2,h3,h4{
+  font-family:'Manrope',sans-serif;
+  color:var(--primary);
+  line-height:1.2;
+  margin:0 0 .5em 0;
+  font-weight:700;
+}
+p{margin:0 0 1em 0;color:var(--text-soft);}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{padding-left:1.1em;}
+button{font-family:inherit;cursor:pointer;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;}
+
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+.section{padding:72px 0;}
+.section-tight{padding:48px 0;}
+.section-light{background:var(--bg-light);}
+.section-primary{background:var(--primary);color:var(--white);}
+.section-primary h2, .section-primary h3{color:var(--white);}
+.section-primary p{color:#CFE6E9;}
+
+.eyebrow{font-size:.85rem;color:var(--secondary);font-weight:600;margin:0 0 8px 0;}
+.section-head{max-width:640px;margin-bottom:40px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 28px;border-radius:100px;font-weight:600;font-size:.95rem;
+  border:2px solid transparent;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  cursor:pointer;white-space:nowrap;
+}
+.btn-primary{background:var(--primary);color:var(--white);}
+.btn-primary:hover{background:var(--secondary);}
+.btn-outline{background:transparent;color:var(--primary);border-color:var(--primary);}
+.btn-outline:hover{background:var(--primary);color:var(--white);}
+.btn-light{background:var(--white);color:var(--primary);}
+.btn-light:hover{background:var(--bg-light);}
+.btn-accent{background:var(--accent);color:var(--white);}
+.btn-accent:hover{background:var(--secondary);}
+.btn-sm{padding:10px 20px;font-size:.85rem;}
+.btn-block{width:100%;}
+
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:1000;background:var(--primary);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;gap:20px;}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.logo-mark{width:40px;height:40px;flex-shrink:0;}
+.logo-text{font-family:'Manrope',sans-serif;font-weight:800;color:var(--white);font-size:1.15rem;line-height:1.1;}
+.logo-text span{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.04em;color:var(--accent);}
+nav.main-nav{display:flex;gap:28px;}
+nav.main-nav a{font-size:.92rem;font-weight:600;color:#CFE6E9;padding:6px 0;border-bottom:2px solid transparent;}
+nav.main-nav a:hover, nav.main-nav a.active{color:var(--white);border-color:var(--accent);}
+.header-actions{display:flex;align-items:center;gap:18px;flex-shrink:0;}
+.header-actions .btn-primary{background:var(--accent);color:var(--white);}
+.header-actions .btn-primary:hover{background:var(--secondary);}
+.phone-link{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--white);font-size:.95rem;}
+.hamburger{display:none;background:none;border:none;padding:8px;}
+.hamburger span, .hamburger::before, .hamburger::after{content:'';display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:.2s;}
+.panel-close-btn{background:none;border:none;padding:8px;font-size:1.4rem;color:var(--primary);line-height:1;}
+
+.mobile-panel{display:none;position:fixed;inset:0;background:var(--white);z-index:1100;padding:20px 24px;overflow-y:auto;}
+.mobile-panel.open{display:block;}
+.mobile-panel-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;}
+.mobile-panel a{display:block;padding:16px 0;font-size:1.15rem;font-weight:600;border-bottom:1px solid var(--border);color:var(--text);}
+.mobile-cta{margin-top:24px;display:flex;flex-direction:column;gap:12px;}
+
+.sticky-mobile-cta{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;
+  background:var(--white);border-top:1px solid var(--border);
+  padding:10px 16px;gap:10px;box-shadow:0 -4px 16px rgba(15,76,92,.08);
+}
+
+/* HERO */
+.hero{background:linear-gradient(180deg,var(--bg-light) 0%, var(--white) 100%);padding:56px 0 0 0;overflow:hidden;}
+.hero-inner{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding-bottom:56px;}
+.hero-copy .eyebrow{margin-bottom:14px;}
+.hero-copy h1{font-size:2.7rem;letter-spacing:-.02em;margin-bottom:20px;}
+.hero-copy p.lead{font-size:1.08rem;color:var(--text-soft);max-width:520px;margin-bottom:28px;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px;}
+.hero-tags{font-size:.85rem;color:var(--secondary);font-weight:600;}
+.hero-media{position:relative;}
+.hero-media-frame{border-radius:var(--radius-m);overflow:hidden;box-shadow:var(--shadow);position:relative;}
+.hero-media-frame img{width:100%;height:460px;object-fit:cover;}
+.hero-badge{
+  position:absolute;left:-20px;bottom:-20px;background:var(--white);border-radius:var(--radius-s);
+  box-shadow:var(--shadow);padding:16px 20px;display:flex;gap:12px;align-items:center;max-width:230px;
+}
+.hero-badge .num{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.5rem;color:var(--primary);}
+.hero-badge .lbl{font-size:.78rem;color:var(--text-soft);line-height:1.3;}
+
+/* QUICK ACTIONS */
+.quick-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;transform:translateY(-40px);position:relative;z-index:2;}
+.qa-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-m);padding:26px 22px;box-shadow:var(--shadow-soft);transition:box-shadow .15s ease, transform .15s ease;}
+.qa-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+.qa-icon{width:44px;height:44px;border-radius:10px;background:var(--bg-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px;}
+.qa-card h3{font-size:1.05rem;margin-bottom:8px;}
+.qa-card p{font-size:.9rem;margin-bottom:14px;}
+.qa-card a.link{font-weight:700;color:var(--secondary);font-size:.88rem;}
+
+/* TWO COL INTRO */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.intro-grid img{border-radius:var(--radius-m);height:420px;width:100%;object-fit:cover;box-shadow:var(--shadow-soft);}
+
+/* SERVICES GRID */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-m);padding:26px;transition:box-shadow .15s ease;}
+.service-card:hover{box-shadow:var(--shadow);}
+.service-icon{width:52px;height:52px;border-radius:12px;background:var(--bg-light);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:18px;}
+.service-card h3{font-size:1.1rem;margin-bottom:8px;}
+.service-card p{font-size:.9rem;margin-bottom:16px;}
+.service-card a.link{font-weight:700;color:var(--secondary);font-size:.88rem;}
+
+/* FEATURED CARE */
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.featured-card{border-radius:var(--radius-m);overflow:hidden;position:relative;box-shadow:var(--shadow-soft);}
+.featured-card img{height:260px;width:100%;object-fit:cover;}
+.featured-card .fc-body{padding:20px;background:var(--white);border:1px solid var(--border);border-top:none;border-bottom-left-radius:var(--radius-m);border-bottom-right-radius:var(--radius-m);}
+.featured-card h3{font-size:1.05rem;margin-bottom:6px;}
+.featured-card p{font-size:.88rem;margin-bottom:10px;}
+
+/* WHY US */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.pillar{padding:8px;}
+.pillar .pillar-icon{width:48px;height:48px;border-radius:12px;background:var(--secondary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px;}
+.pillar h3{font-size:1.02rem;margin-bottom:8px;}
+.pillar p{font-size:.88rem;}
+
+/* DOCTORS */
+.doctor-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-m);overflow:hidden;transition:box-shadow .15s ease;}
+.doctor-card:hover{box-shadow:var(--shadow);}
+.doctor-photo{height:230px;width:100%;object-fit:cover;background:var(--bg-light);}
+.doctor-body{padding:20px;}
+.doctor-body h3{font-size:1.02rem;margin-bottom:2px;}
+.doctor-specialty{font-size:.82rem;color:var(--secondary);font-weight:700;margin-bottom:10px;}
+.doctor-body p{font-size:.85rem;margin-bottom:12px;}
+
+/* FACILITY GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px;}
+.gallery figure{margin:0;border-radius:var(--radius-s);overflow:hidden;position:relative;}
+.gallery figure img{width:100%;height:100%;object-fit:cover;}
+.gallery figure figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(15,76,92,.75),transparent);color:var(--white);font-size:.78rem;font-weight:600;padding:20px 10px 8px;}
+.gallery figure.span-2{grid-column:span 2;}
+.gallery figure.span-2row{grid-row:span 2;}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+.stat-num{font-family:'Manrope',sans-serif;font-weight:800;font-size:2.6rem;color:var(--white);}
+.stat-lbl{font-size:.9rem;color:#CFE6E9;margin-top:6px;}
+
+/* TESTIMONIALS */
+.testimonial-track{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.testimonial{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-m);padding:26px;box-shadow:var(--shadow-soft);}
+.testimonial p.quote{font-size:.95rem;color:var(--text);margin-bottom:16px;}
+.testimonial .who{font-weight:700;font-size:.88rem;color:var(--primary);}
+.testimonial .reason{font-size:.78rem;color:var(--text-soft);}
+.stars{color:#E3A63F;letter-spacing:2px;margin-bottom:10px;font-size:.9rem;}
+
+/* FORM */
+.appointment-panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:var(--radius-m);overflow:hidden;box-shadow:var(--shadow);}
+.appointment-info{background:var(--primary);color:var(--white);padding:44px;}
+.appointment-info h2, .appointment-info p{color:var(--white);}
+.appointment-info ul{list-style:none;padding:0;margin:24px 0;}
+.appointment-info li{display:flex;gap:10px;margin-bottom:14px;font-size:.92rem;color:#CFE6E9;}
+.appointment-form{background:var(--white);padding:44px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field.full{grid-column:1/-1;}
+.field label{font-size:.82rem;font-weight:600;color:var(--text);}
+.field input, .field select, .field textarea{
+  padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--radius-s);
+  font-family:inherit;font-size:.92rem;color:var(--text);background:var(--white);
+}
+.field input:focus, .field select:focus, .field textarea:focus{border-color:var(--accent);}
+.form-note{font-size:.78rem;color:var(--text-soft);margin-top:10px;}
+.form-success{display:none;background:var(--bg-light);border:1.5px solid var(--accent);border-radius:var(--radius-s);padding:22px;text-align:center;}
+.form-success h3{margin-bottom:8px;}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:1rem;color:var(--primary);}
+.faq-plus{font-size:1.3rem;color:var(--secondary);transition:transform .2s ease;}
+.faq-item.open .faq-plus{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+.faq-a-inner{padding-bottom:20px;font-size:.92rem;color:var(--text-soft);}
+
+/* CTA BAND */
+.cta-band{background:var(--white);color:var(--text);border:1px solid var(--border);box-shadow:var(--shadow);border-radius:var(--radius-m);padding:56px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;}
+.cta-band .cta-actions{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* FOOTER */
+footer{background:var(--primary);color:#CFE6E9;padding:56px 0 24px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px;}
+.footer-grid h4{color:var(--white);font-size:.95rem;margin-bottom:16px;}
+.footer-grid a{display:block;color:#B7D6D9;font-size:.88rem;margin-bottom:10px;}
+.footer-grid a:hover{color:var(--white);}
+.footer-logo{display:flex;gap:10px;align-items:center;margin-bottom:14px;}
+.footer-logo .logo-text{color:var(--white);}
+.footer-logo .logo-text span{color:var(--accent);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:20px;display:flex;justify-content:space-between;font-size:.8rem;color:#8FB7BB;flex-wrap:wrap;gap:10px;}
+.footer-bottom a{color:#8FB7BB;}
+
+/* PAGE HEADER (interior pages) */
+.page-header{background:var(--bg-light);padding:52px 0;}
+.page-header .eyebrow{margin-bottom:10px;}
+.breadcrumb{font-size:.82rem;color:var(--text-soft);margin-bottom:14px;}
+.breadcrumb a{color:var(--secondary);font-weight:600;}
+
+/* DOCTOR / SERVICE DETAIL */
+.detail-grid{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start;}
+.detail-photo{width:100%;border-radius:var(--radius-m);object-fit:cover;height:340px;box-shadow:var(--shadow-soft);}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+.tag{background:var(--bg-light);color:var(--secondary);font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:100px;}
+.side-card{background:var(--bg-light);border:1px solid var(--border);border-radius:var(--radius-m);padding:26px;position:sticky;top:100px;}
+.side-card h3{font-size:1rem;margin-bottom:14px;}
+.side-card .phone-big{font-size:1.2rem;font-weight:800;color:var(--primary);display:block;margin:10px 0 18px;}
+dl.info-list{margin:0;}
+dl.info-list dt{font-size:.78rem;font-weight:700;color:var(--secondary);margin-top:14px;}
+dl.info-list dd{margin:4px 0 0 0;font-size:.9rem;color:var(--text-soft);}
+
+.article-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-m);overflow:hidden;transition:box-shadow .15s ease;}
+.article-card:hover{box-shadow:var(--shadow);}
+.article-card img{height:180px;width:100%;object-fit:cover;}
+.article-body{padding:20px;}
+.article-body h3{font-size:1.02rem;margin-bottom:8px;}
+.article-body p{font-size:.87rem;}
+
+.list-page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+
+.simple-list{margin:0 0 20px 0;padding-left:20px;}
+.simple-list li{margin-bottom:10px;color:var(--text-soft);font-size:.95rem;}
+
+.accordion-plain h3{margin-top:28px;font-size:1.1rem;}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none !important;}
+}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+  .quick-actions{grid-template-columns:repeat(2,1fr);}
+  .featured-grid{grid-template-columns:repeat(2,1fr);}
+  .grid-3, .grid-4, .list-page-grid{grid-template-columns:repeat(2,1fr);}
+  .pillars{grid-template-columns:repeat(2,1fr);}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:32px;}
+  .testimonial-track{grid-template-columns:repeat(2,1fr);}
+  .gallery{grid-template-columns:repeat(3,1fr);}
+  .detail-grid{grid-template-columns:1fr;}
+  .side-card{position:static;}
+}
+@media (max-width:760px){
+  nav.main-nav{display:none;}
+  .header-inner{padding:12px 16px;gap:10px;}
+  .header-actions{gap:8px;}
+  .header-actions .btn{display:none;}
+  .header-actions .phone-link{display:none;}
+  .hamburger{display:block;flex-shrink:0;}
+  .hero-inner{grid-template-columns:1fr;padding-bottom:40px;}
+  .hero-media{order:-1;}
+  .hero-media-frame img{height:280px;}
+  .hero-badge{left:12px;bottom:-16px;padding:12px 16px;}
+  .hero-copy h1{font-size:2rem;}
+  .quick-actions{grid-template-columns:1fr;transform:none;padding-top:24px;}
+  .intro-grid{grid-template-columns:1fr;gap:28px;}
+  .intro-grid img{height:260px;}
+  .featured-grid, .grid-3, .grid-4, .list-page-grid, .pillars, .stats-grid, .testimonial-track{grid-template-columns:1fr;}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}
+  .gallery figure.span-2{grid-column:span 1;}
+  .appointment-panel{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .cta-band{flex-direction:column;text-align:center;padding:36px 24px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .section{padding:48px 0;}
+  body{padding-bottom:66px;}
+  .sticky-mobile-cta{display:flex;}
+  .detail-photo{height:220px;}
+}
+@media (max-width:460px){
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#/" class="logo" aria-label="ATZ Vitalz Medical Center home">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" stroke="#5FB3B3" stroke-width="2"/>
+        <path d="M20 10V30M12 20C12 20 15 14 20 14C25 14 25 20 20 20C15 20 15 26 20 26C25 26 28 20 28 20" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <div class="logo-text">ATZ Vitalz<span>MEDICAL CENTER</span></div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#/" data-route="/">Home</a>
+      <a href="#/about" data-route="/about">About Us</a>
+      <a href="#/services" data-route="/services">Services</a>
+      <a href="#/patients" data-route="/patients">Patients &amp; Visitors</a>
+      <a href="#/resources" data-route="/resources">Health Resources</a>
+      <a href="#/contact" data-route="/contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="phone-link" href="tel:4074129882"><span class="txt">407-412-9882</span></a>
+      <a class="btn btn-primary btn-sm" href="#/appointment">Request an Appointment</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-top">
+    <div class="logo-text" style="color:var(--primary)">ATZ Vitalz<span style="color:var(--secondary)">MEDICAL CENTER</span></div>
+    <button class="panel-close-btn" id="closePanelBtn" aria-label="Close menu">✕</button>
+  </div>
+  <a href="#/">Home</a>
+  <a href="#/about">About Us</a>
+  <a href="#/services">Services</a>
+  <a href="#/patients">Patients &amp; Visitors</a>
+  <a href="#/resources">Health Resources</a>
+  <a href="#/contact">Contact</a>
+  <div class="mobile-cta">
+    <a class="btn btn-primary btn-block" href="#/appointment">Request an Appointment</a>
+    <a class="btn btn-outline btn-block" href="tel:4074129882">Call 407-412-9882</a>
+  </div>
+</div>
+
+<main id="app"></main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="#5FB3B3" stroke-width="2"/>
+            <path d="M20 10V30M12 20C12 20 15 14 20 14C25 14 25 20 20 20C15 20 15 26 20 26C25 26 28 20 28 20" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="logo-text">ATZ Vitalz<span>MEDICAL CENTER</span></div>
+        </div>
+        <p style="font-size:.88rem;max-width:280px;color:#B7D6D9;">A community-focused medical center serving Orlando and the greater Central Florida region since 2009.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#/about">About Us</a>
+        <a href="#/services">Services</a>
+        <a href="#/patients">Patients &amp; Visitors</a>
+        <a href="#/resources">Health Resources</a>
+        <a href="#/contact">Contact</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <a href="tel:4074129882">407-412-9882</a>
+        <a href="mailto:atzvitalzmedicalcenter@gmail.com" aria-label="Email ATZ Vitalz Medical Center" style="display:flex;align-items:center;gap:8px;">✉️ <span>Email Us</span></a>
+        <a href="#/contact">5500 Kingswood Dr<br>Orlando, FL 32810</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#/privacy">Privacy Policy</a>
+        <a href="#/terms">Terms of Use</a>
+        <a href="#/accessibility">Accessibility</a>
+        <a href="#/notice">Notice of Privacy Practices</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ATZ Vitalz Medical Center. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-mobile-cta">
+  <a class="btn btn-outline btn-block btn-sm" href="tel:4074129882">Call Now</a>
+  <a class="btn btn-primary btn-block btn-sm" href="#/appointment">Request Appointment</a>
+</div>
+
+<script>
+// All content below is fictional demonstration content created for this website concept.
+// Names, providers, statistics, testimonials, and addresses are invented and do not represent real people or places.
+
+// Real, freely-licensed photographs sourced from Wikimedia Commons (stable, no rate limits).
+const WM = "https://commons.wikimedia.org/wiki/Special:FilePath/";
+const IMG = {
+  hero: WM + "Doctor_talking_with_a_patient.jpg?width=1200",
+  intro: WM + "Doctor_consults_with_patient_(7).jpg?width=1000",
+  exterior: WM + "USA-Gilroy-Wheeler_Hospital-1.jpg?width=1200",
+  reception: WM + "Doctorsoffice.jpg?width=900",
+  waiting: WM + "Doctor_advises_patient.jpg?width=900",
+  patientRoom: WM + "Doctor_advises_patient.jpg?width=900",
+  exam: WM + "A_patient_exam_room_at_an_urgent_care_clinic_and_doctor%E2%80%99s_office_in_North_Carolina,_United_States_06.jpg?width=900",
+  team: WM + "Doctor_consults_with_patient_(7).jpg?width=1000",
+  diagnostic: WM + "A_patient_exam_room_at_an_urgent_care_clinic_and_doctor%E2%80%99s_office_in_North_Carolina,_United_States_06.jpg?width=900",
+  nurse: WM + "Doctorsoffice.jpg?width=900",
+  hallway: WM + "USA-Gilroy-Wheeler_Hospital-1.jpg?width=900",
+  cardio: WM + "Doctor_talking_with_a_patient.jpg?width=800",
+  womens: WM + "Doctor_advises_patient.jpg?width=800",
+  ortho: WM + "Doctor_consults_with_patient_(7).jpg?width=800",
+  peds: WM + "Doctorsoffice.jpg?width=800",
+  neuro: WM + "A_patient_exam_room_at_an_urgent_care_clinic_and_doctor%E2%80%99s_office_in_North_Carolina,_United_States_06.jpg?width=800",
+  primary: WM + "USA-Gilroy-Wheeler_Hospital-1.jpg?width=800",
+  art1: WM + "Doctor_talking_with_a_patient.jpg?width=700",
+  art2: WM + "Doctor_advises_patient.jpg?width=700",
+  art3: WM + "Doctor_consults_with_patient_(7).jpg?width=700",
+  art4: WM + "Doctorsoffice.jpg?width=700",
+  art5: WM + "A_patient_exam_room_at_an_urgent_care_clinic_and_doctor%E2%80%99s_office_in_North_Carolina,_United_States_06.jpg?width=700",
+  art6: WM + "USA-Gilroy-Wheeler_Hospital-1.jpg?width=700",
+};
+
+const DOCTORS = [
+  {
+    id: "castillo",
+    name: "Dr. Miriam Castillo, MD",
+    specialty: "Internal Medicine",
+    position: "Chief Medical Officer",
+    photo: "https://i.pravatar.cc/500?img=47",
+    dept: "primary-care",
+    languages: ["English", "Spanish"],
+    bio: "Dr. Castillo has served the Orlando community for over eighteen years and leads the medical staff at ATZ Vitalz Medical Center. She focuses on building long-term relationships with patients and coordinating care across specialties so nothing falls through the cracks.",
+    education: ["MD, Ohio State University College of Medicine", "Residency in Internal Medicine, Cleveland Regional Medical Center"],
+    expertise: ["Chronic disease management", "Preventive health screening", "Care coordination"]
+  },
+  {
+    id: "hensley",
+    name: "Dr. Robert Hensley, MD",
+    specialty: "Cardiology",
+    position: "Cardiologist",
+    photo: "https://i.pravatar.cc/500?img=12",
+    dept: "cardiology",
+    languages: ["English"],
+    bio: "Dr. Hensley specializes in diagnosing and managing heart conditions, from routine risk assessments to more complex cases. He is known for taking time to explain test results in plain language so patients feel informed about their own care.",
+    education: ["MD, University of Michigan Medical School", "Fellowship in Cardiovascular Disease, Riverside Heart Institute"],
+    expertise: ["Hypertension management", "Heart rhythm evaluation", "Cardiac risk assessment"]
+  },
+  {
+    id: "whitfield",
+    name: "Dr. Aisha Whitfield, MD",
+    specialty: "Pediatrics",
+    position: "Pediatrician",
+    photo: "https://i.pravatar.cc/500?img=32",
+    dept: "pediatrics",
+    languages: ["English", "French"],
+    bio: "Dr. Whitfield has cared for children in Orlando for over a decade, from newborn visits through the teenage years. Parents often mention how patient she is with anxious kids and how clearly she walks families through next steps.",
+    education: ["MD, Case Western Reserve University", "Residency in Pediatrics, Rainbow Children's Hospital"],
+    expertise: ["Well-child visits", "Childhood immunizations", "Developmental screening"]
+  },
+  {
+    id: "reyes",
+    name: "Dr. Daniel Reyes, MD",
+    specialty: "Orthopedics",
+    position: "Orthopedic Surgeon",
+    photo: "https://i.pravatar.cc/500?img=53",
+    dept: "orthopedics",
+    languages: ["English", "Spanish"],
+    bio: "Dr. Reyes treats injuries and conditions affecting bones, joints, and muscles, with a particular interest in helping active adults return to the activities they enjoy. He works closely with the physical rehabilitation team on recovery plans.",
+    education: ["MD, Indiana University School of Medicine", "Residency in Orthopedic Surgery, Midwest Orthopedic Center"],
+    expertise: ["Sports injuries", "Joint pain evaluation", "Non-surgical treatment planning"]
+  },
+  {
+    id: "nandakumar",
+    name: "Dr. Priya Nandakumar, MD",
+    specialty: "Neurology",
+    position: "Neurologist",
+    photo: "https://i.pravatar.cc/500?img=45",
+    dept: "neurology",
+    languages: ["English", "Hindi", "Tamil"],
+    bio: "Dr. Nandakumar evaluates and manages conditions of the brain and nervous system, including headaches, dizziness, and memory concerns. She takes a methodical approach, working through possible causes with patients step by step.",
+    education: ["MD, University of Pittsburgh School of Medicine", "Fellowship in Clinical Neurology, Lakeshore Neuroscience Institute"],
+    expertise: ["Headache and migraine care", "Memory and cognitive concerns", "Nerve-related pain"]
+  },
+  {
+    id: "kowalski",
+    name: "Dr. Sarah Kowalski, MD",
+    specialty: "Women's Health",
+    position: "OB-GYN",
+    photo: "https://i.pravatar.cc/500?img=28",
+    dept: "womens-health",
+    languages: ["English", "Polish"],
+    bio: "Dr. Kowalski provides care for women at every stage of life, from routine wellness exams to prenatal care. Patients frequently note how comfortable she makes them feel discussing sensitive health questions.",
+    education: ["MD, University of Cincinnati College of Medicine", "Residency in Obstetrics and Gynecology, St. Aubin Women's Hospital"],
+    expertise: ["Prenatal care", "Annual wellness exams", "Menopause management"]
+  },
+  {
+    id: "osei",
+    name: "Dr. Michael Osei, MD",
+    specialty: "Family Medicine",
+    position: "Family Physician",
+    photo: "https://i.pravatar.cc/500?img=14",
+    dept: "primary-care",
+    languages: ["English"],
+    bio: "Dr. Osei sees patients of all ages and often becomes the first point of contact for families navigating a new diagnosis. He is known around the medical center for his calm, unhurried bedside manner.",
+    education: ["MD, Wright State University Boonshoft School of Medicine", "Residency in Family Medicine, Central Florida Family Health"],
+    expertise: ["Annual physicals", "Diabetes management", "Whole-family care"]
+  },
+  {
+    id: "marchetti",
+    name: "Dr. Elena Marchetti, MD",
+    specialty: "Emergency Medicine",
+    position: "Emergency Physician",
+    photo: "https://i.pravatar.cc/500?img=25",
+    dept: "emergency-care",
+    languages: ["English", "Italian"],
+    bio: "Dr. Marchetti has worked in emergency medicine for more than a decade and helps lead the urgent and emergency care team at ATZ Vitalz. She is focused on making sure patients are seen quickly and treated with clear communication during stressful moments.",
+    education: ["MD, Ohio University Heritage College of Osteopathic Medicine", "Residency in Emergency Medicine, Cornerstone Medical Center"],
+    expertise: ["Acute injury care", "Urgent illness evaluation", "Rapid diagnostic triage"]
+  },
+  {
+    id: "okafor",
+    name: "Dr. James Okafor, MD",
+    specialty: "Diagnostic Imaging",
+    position: "Radiologist",
+    photo: "https://i.pravatar.cc/500?img=51",
+    dept: "diagnostic-imaging",
+    languages: ["English", "Igbo"],
+    bio: "Dr. Okafor reviews and interprets imaging studies across the medical center, working behind the scenes with referring physicians to help reach an accurate diagnosis as quickly as possible.",
+    education: ["MD, Northeast Ohio Medical University", "Residency in Diagnostic Radiology, Lakeshore Imaging Center"],
+    expertise: ["X-ray and CT interpretation", "MRI review", "Diagnostic ultrasound"]
+  },
+  {
+    id: "lindqvist",
+    name: "Dr. Grace Lindqvist, DPT",
+    specialty: "Physical Rehabilitation",
+    position: "Rehabilitation Specialist",
+    photo: "https://i.pravatar.cc/500?img=39",
+    dept: "rehabilitation",
+    languages: ["English", "Swedish"],
+    bio: "Dr. Lindqvist designs recovery plans for patients healing from surgery, injury, or chronic pain. She works closely with orthopedics and primary care to keep every patient's rehabilitation plan on track.",
+    education: ["DPT, Ohio State University", "Certification in Orthopedic Manual Therapy"],
+    expertise: ["Post-surgical recovery", "Chronic pain management", "Mobility and strength training"]
+  }
+];
+
+const SERVICES = [
+  {
+    slug: "internal-medicine",
+    name: "Internal Medicine",
+    icon: "🧬",
+    short: "Comprehensive adult care focused on prevention, diagnosis, and management of complex conditions.",
+    overview: "Our internal medicine team supports adult patients with a wide range of health needs, including the ongoing management of multiple or complex conditions that benefit from a coordinated approach.",
+    treat: ["Diabetes and thyroid conditions", "High blood pressure and cholesterol", "Complex or overlapping chronic conditions", "Adult preventive care"],
+    expect: "Internal medicine visits often involve a detailed review of your medications and health history, along with lab work to track your progress over time.",
+    specialists: ["castillo"],
+    faqs: [
+      { q: "How is internal medicine different from primary care?", a: "Internal medicine physicians focus specifically on adults, often with more complex or overlapping health conditions." }
+    ]
+  },
+  {
+    slug: "cardiology",
+    name: "Cardiology",
+    icon: "❤️",
+    short: "Heart health evaluation, monitoring, and treatment from an experienced cardiology team.",
+    overview: "Our cardiology team helps patients understand and manage their heart health, whether you're coming in for a routine risk assessment or ongoing care of a diagnosed heart condition.",
+    treat: ["High blood pressure", "Irregular heartbeat", "Chest pain evaluation", "Cardiac risk assessment", "Heart disease management"],
+    expect: "Depending on your needs, your visit may include an EKG, blood pressure monitoring, and a conversation about lifestyle factors that affect heart health.",
+    specialists: ["hensley"],
+    faqs: [
+      { q: "Do I need a referral to see cardiology?", a: "A referral from your primary care provider is often helpful but our team can advise on the best path for your situation." }
+    ]
+  },
+  {
+    slug: "womens-health",
+    name: "Women's Health",
+    icon: "🤱",
+    short: "Compassionate care for women at every life stage, from wellness exams to prenatal care.",
+    overview: "Our women's health team provides care that respects each patient's comfort and privacy, covering everything from annual exams to pregnancy and menopause support.",
+    treat: ["Annual wellness exams", "Prenatal and postpartum care", "Menopause symptom management", "Reproductive health concerns"],
+    expect: "Visits are scheduled with plenty of time for questions, and our team is happy to explain every part of an exam before it happens.",
+    specialists: ["kowalski"],
+    faqs: [
+      { q: "Can I request a female provider?", a: "Yes, we're happy to accommodate provider preferences whenever scheduling allows." }
+    ]
+  },
+  {
+    slug: "orthopedics",
+    name: "Orthopedics",
+    icon: "🦴",
+    short: "Care for bones, joints, and muscles, including sports injuries and joint pain.",
+    overview: "Whether you're recovering from an injury or dealing with ongoing joint pain, our orthopedic team works to identify the cause and build a treatment plan suited to your lifestyle.",
+    treat: ["Sports and activity-related injuries", "Joint and back pain", "Fractures and sprains", "Arthritis-related discomfort"],
+    expect: "Your visit may include a physical exam, imaging if needed, and a discussion of both surgical and non-surgical treatment options.",
+    specialists: ["reyes"],
+    faqs: [
+      { q: "Will I need surgery?", a: "Many orthopedic concerns are treated without surgery. Our team will walk you through the options that fit your situation." }
+    ]
+  },
+  {
+    slug: "pediatrics",
+    name: "Pediatrics",
+    icon: "🧒",
+    short: "Friendly, attentive care for infants, children, and teenagers.",
+    overview: "Our pediatrics team supports families from the earliest well-baby visits through the teenage years, focused on healthy growth and development every step of the way.",
+    treat: ["Well-child checkups", "Immunizations", "Developmental screening", "Common childhood illnesses"],
+    expect: "Our pediatric exam rooms are designed to feel welcoming for children, and our providers take extra time to help younger patients feel at ease.",
+    specialists: ["whitfield"],
+    faqs: [
+      { q: "What should I bring to my child's first visit?", a: "Please bring any prior immunization records and a list of current medications or allergies." }
+    ]
+  },
+  {
+    slug: "neurology",
+    name: "Neurology",
+    icon: "🧠",
+    short: "Evaluation and treatment for conditions affecting the brain and nervous system.",
+    overview: "Our neurology team helps patients get answers for symptoms like recurring headaches, dizziness, or memory changes, working through possible causes with a clear, structured approach.",
+    treat: ["Headaches and migraines", "Memory and cognitive concerns", "Numbness or tingling", "Dizziness and balance issues"],
+    expect: "An initial neurology visit typically includes a detailed history and a neurological exam, with additional testing recommended if needed.",
+    specialists: ["nandakumar"],
+    faqs: [
+      { q: "How long does a typical neurology workup take?", a: "It varies by condition, but our team will explain expected next steps and timelines at your first visit." }
+    ]
+  },
+  {
+    slug: "diagnostic-imaging",
+    name: "Diagnostic Imaging",
+    icon: "🩻",
+    short: "On-site imaging services to support fast, accurate diagnosis.",
+    overview: "Our diagnostic imaging department supports nearly every department at ATZ Vitalz Medical Center, giving physicians the detailed information they need to make confident treatment decisions.",
+    treat: ["X-ray imaging", "CT scans", "MRI studies", "Diagnostic ultrasound"],
+    expect: "Most imaging appointments take between 20 and 60 minutes. Our staff will let you know if any preparation is needed ahead of time.",
+    specialists: ["okafor"],
+    faqs: [
+      { q: "Do I need to prepare for an imaging appointment?", a: "Preparation depends on the type of scan. Our scheduling team will provide specific instructions when you book." }
+    ]
+  },
+  {
+    slug: "laboratory-services",
+    name: "Laboratory Services",
+    icon: "🧪",
+    short: "On-site lab testing for fast, reliable results connected directly to your care team.",
+    overview: "Our laboratory services team processes routine and specialized testing on-site, so your care team can review results and follow up with you quickly.",
+    treat: ["Routine bloodwork", "Cholesterol and metabolic panels", "Screening and diagnostic testing"],
+    expect: "Most lab visits take less than 15 minutes. Some tests require fasting beforehand, which our team will let you know in advance.",
+    specialists: [],
+    faqs: [
+      { q: "Do I need an appointment for lab work?", a: "Walk-ins are welcome for many routine tests, though scheduling ahead can reduce your wait time." }
+    ]
+  },
+  {
+    slug: "preventive-care",
+    name: "Preventive Care",
+    icon: "🛡️",
+    short: "Screenings, vaccinations, and wellness planning to help you stay ahead of health concerns.",
+    overview: "Preventive care is about catching potential issues early and building healthy habits that last. Our team works with patients to create a screening and wellness schedule suited to their age and health history.",
+    treat: ["Routine screenings", "Vaccinations", "Risk factor assessments", "Lifestyle and wellness planning"],
+    expect: "Preventive visits are typically scheduled annually and may include bloodwork, screenings, and a conversation about your health goals.",
+    specialists: ["castillo", "osei"],
+    faqs: [
+      { q: "What screenings are recommended for my age?", a: "Recommendations vary by age, sex, and health history. Your provider will walk you through what's appropriate for you." }
+    ]
+  },
+  {
+    slug: "emergency-care",
+    name: "Emergency & Urgent Care",
+    icon: "🚑",
+    short: "Prompt care for urgent, non-life-threatening injuries and illnesses.",
+    overview: "Our urgent and emergency care team is here for injuries and illnesses that need prompt attention. For life-threatening emergencies, please call 911 or go to the nearest emergency department.",
+    treat: ["Minor injuries and cuts", "Sudden illness", "Fevers and infections", "Sprains and minor fractures"],
+    expect: "Patients are seen based on the severity of their condition. Our team will keep you informed about wait times whenever possible.",
+    specialists: ["marchetti"],
+    faqs: [
+      { q: "When should I go to the emergency room instead?", a: "If you are experiencing a medical emergency, call 911 or go to the nearest emergency department right away." }
+    ]
+  },
+  {
+    slug: "rehabilitation",
+    name: "Physical Rehabilitation",
+    icon: "🏃",
+    short: "Personalized recovery plans following surgery, injury, or chronic pain.",
+    overview: "Our physical rehabilitation team helps patients regain strength, mobility, and confidence after surgery, injury, or a chronic condition, working closely with orthopedics and primary care.",
+    treat: ["Post-surgical recovery", "Sports injury rehabilitation", "Chronic pain management", "Mobility and balance training"],
+    expect: "Your first session includes a movement assessment and a personalized plan with clear, measurable goals.",
+    specialists: ["lindqvist"],
+    faqs: [
+      { q: "How many sessions will I need?", a: "This depends on your condition and goals. Your rehabilitation specialist will outline an expected timeline early on." }
+    ]
+  }
+];
+
+const FEATURED_SLUGS = ["cardiology", "womens-health", "orthopedics", "pediatrics", "neurology"];
+const FEATURED_IMAGES = {
+  "cardiology": IMG.cardio, "womens-health": IMG.womens, "orthopedics": IMG.ortho,
+  "pediatrics": IMG.peds, "neurology": IMG.neuro
+};
+
+const TESTIMONIALS = [
+  { name: "Karen T.", reason: "Annual physical", quote: "Scheduling was easy and I barely waited past my appointment time. Dr. Osei actually listened instead of rushing through my questions.", stars: 5 },
+  { name: "Marcus D.", reason: "Knee injury follow-up", quote: "The front desk staff remembered me by name after my first visit, which felt nice. The physical therapy team helped me get back to running again.", stars: 5 },
+  { name: "Linda P.", reason: "Prenatal care", quote: "Dr. Kowalski explained everything clearly and never made me feel rushed. I always left my appointments feeling like my questions were answered.", stars: 5 },
+  { name: "James R.", reason: "Cardiology visit", quote: "I was nervous about my test results, but Dr. Hensley walked me through everything on the screen so I actually understood what was going on.", stars: 4 },
+  { name: "Angela W.", reason: "Pediatric checkup", quote: "My son is usually scared of doctor visits, but the nurses here are so patient with him. It makes a real difference.", stars: 5 }
+];
+
+const ARTICLES = [
+  {
+    slug: "prepare-annual-checkup",
+    title: "How to Prepare for Your Annual Checkup",
+    image: IMG.art1,
+    excerpt: "A few simple steps before your visit can help you and your provider make the most of your appointment.",
+    body: "Bring a current list of medications, including any supplements you take regularly. Write down questions ahead of time so you don't forget them once you're in the room. If you're due for bloodwork, ask whether fasting is required beforehand. Arriving fifteen minutes early gives you time to complete any paperwork without feeling rushed."
+  },
+  {
+    slug: "questions-to-ask-doctor",
+    title: "5 Questions to Ask at Your Next Doctor's Visit",
+    image: IMG.art2,
+    excerpt: "Good questions lead to better conversations and a clearer understanding of your health.",
+    body: "Consider asking what your test results mean in practical terms, what lifestyle changes might help your specific situation, and what warning signs should prompt a follow-up call. It's also worth asking how a new medication might interact with what you're already taking, and when you should expect to see improvement."
+  },
+  {
+    slug: "understanding-preventive-healthcare",
+    title: "Understanding Preventive Healthcare",
+    image: IMG.art3,
+    excerpt: "Preventive care is about catching small issues before they become bigger ones.",
+    body: "Preventive healthcare includes routine screenings, vaccinations, and regular checkups designed to catch potential health concerns early. Many conditions are easier to manage, and sometimes reverse, when they're identified before symptoms appear. Talk with your provider about which screenings make sense for your age and health history."
+  },
+  {
+    slug: "when-schedule-routine-physical",
+    title: "When Should You Schedule a Routine Physical?",
+    image: IMG.art4,
+    excerpt: "Most adults benefit from an annual visit, but your personal timeline may differ.",
+    body: "Generally, adults in good health benefit from a physical once a year. If you're managing a chronic condition, your provider may recommend more frequent visits. Big life changes, like starting a new medication or noticing new symptoms, are also good reasons to schedule a visit sooner rather than later."
+  },
+  {
+    slug: "heart-health-habits",
+    title: "Heart Health: Everyday Habits That Matter",
+    image: IMG.art5,
+    excerpt: "Small daily choices can add up to meaningful differences in heart health over time.",
+    body: "Regular movement, even a daily walk, supports cardiovascular health. Reducing added sugar and sodium, getting consistent sleep, and managing stress all play a role as well. If heart disease runs in your family, talk to your provider about additional screening that may be appropriate for you."
+  },
+  {
+    slug: "managing-healthcare-appointments",
+    title: "Managing Your Healthcare Appointments",
+    image: IMG.art6,
+    excerpt: "A few habits can make it easier to stay on top of appointments across multiple providers.",
+    body: "Keeping a simple calendar of upcoming appointments, refill dates, and follow-up tests can prevent things from slipping through the cracks. If you see multiple specialists, consider asking your primary care provider to help coordinate care so everyone stays informed."
+  }
+];
+
+const GENERAL_FAQS = [
+  { q: "How do I request an appointment?", a: "You can request an appointment online through our appointment form, or call us directly at 407-412-9882 and our scheduling team will help find a time that works for you." },
+  { q: "What services does ATZ Vitalz Medical Center provide?", a: "We offer primary care, internal medicine, cardiology, women's health, orthopedics, pediatrics, neurology, diagnostic imaging, laboratory services, preventive care, emergency and urgent care, and physical rehabilitation." },
+  { q: "How do I contact the medical center?", a: "Call us at 407-412-9882, email atzvitalzmedicalcenter@gmail.com, or use the contact form on our website." },
+  { q: "What should I bring to my appointment?", a: "Please bring a photo ID, your insurance card, a list of current medications, and any relevant medical records if you're a new patient." },
+  { q: "How early should I arrive?", a: "We recommend arriving fifteen minutes before your scheduled appointment time to complete any necessary paperwork." },
+  { q: "Do you accept insurance?", a: "Insurance participation varies by plan. Please call 407-412-9882 to confirm your coverage before your visit." },
+  { q: "Can I request a specific doctor?", a: "Yes, you're welcome to request a specific provider when scheduling, subject to availability." },
+  { q: "What should I do if I have an urgent medical concern?", a: "For urgent, non-life-threatening concerns, contact our urgent care team. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department." }
+];
+
+const app = document.getElementById('app');
+
+function findService(slug){ return SERVICES.find(s => s.slug === slug); }
+function findDoctor(id){ return DOCTORS.find(d => d.id === id); }
+function findArticle(slug){ return ARTICLES.find(a => a.slug === slug); }
+function doctorTags(deptSlug){ return DOCTORS.filter(d => d.dept === deptSlug); }
+
+function starString(n){ return "★".repeat(n) + "☆".repeat(5-n); }
+
+/* ---------- SHARED PIECES ---------- */
+
+function heroQuickActions(){
+  return `
+  <section style="background:var(--primary);padding:0 0 56px 0;">
+    <div class="container">
+      <div class="quick-actions">
+        <div class="qa-card">
+          <div class="qa-icon">📅</div>
+          <h3>Request an Appointment</h3>
+          <p>Find the right care and request an appointment with our team.</p>
+          <a class="link" href="#/appointment">Get started →</a>
+        </div>
+        <div class="qa-card">
+          <div class="qa-icon">🏥</div>
+          <h3>Our Services</h3>
+          <p>Discover the healthcare services available at ATZ Vitalz.</p>
+          <a class="link" href="#/services">View services →</a>
+        </div>
+        <div class="qa-card">
+          <div class="qa-icon">✉️</div>
+          <h3>Contact Us</h3>
+          <p>Have a question? Our team is ready to help.</p>
+          <a class="link" href="#/contact">Reach out →</a>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function ctaBand(){
+  return `
+  <section class="section" style="background:var(--primary);">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Your Health Deserves Personalized Care.</h2>
+          <p style="max-width:480px;">Whether you're looking for routine care, exploring treatment options, or simply have a question for our team, we're here to help you take the next step.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="#/appointment">Request an Appointment</a>
+          <a class="btn btn-outline" href="tel:4074129882">Call 407-412-9882</a>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function appointmentFormBlock(){
+  return `
+  <div class="appointment-panel">
+    <div class="appointment-info">
+      <div class="eyebrow" style="color:#9FD4D8;">Request an Appointment</div>
+      <h2>We'll help you find the right time and provider.</h2>
+      <p>Fill out the form and a member of our scheduling team will contact you to confirm your appointment details.</p>
+      <ul>
+        <li>📞 Prefer to talk it through? Call 407-412-9882.</li>
+        <li>🕒 Our scheduling team typically responds within one business day.</li>
+        <li>🔒 Please do not submit sensitive medical information through this form.</li>
+      </ul>
+    </div>
+    <div class="appointment-form">
+      <form id="apptForm">
+        <div class="form-row">
+          <div class="field"><label for="fname">First Name</label><input id="fname" required></div>
+          <div class="field"><label for="lname">Last Name</label><input id="lname" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="pdate">Preferred Date</label><input id="pdate" type="date"></div>
+          <div class="field"><label for="dept">Preferred Department</label>
+            <select id="dept">
+              ${SERVICES.map(s => `<option value="${s.slug}">${s.name}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="contactMethod">Preferred Contact Method</label>
+            <select id="contactMethod"><option>Phone</option><option>Email</option><option>Either</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="msg">Message</label><textarea id="msg" rows="3" placeholder="Tell us a bit about why you're scheduling a visit"></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Request Appointment</button>
+        <p class="form-note">Please do not submit sensitive medical information through this form.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <h3>Thank you for contacting ATZ Vitalz Medical Center.</h3>
+        <p style="margin:0;">Your request has been received and a member of our team will contact you regarding next steps.</p>
+      </div>
+    </div>
+  </div>`;
+}
+
+function initApptForm(){
+  const form = document.getElementById('apptForm');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const val = id => (document.getElementById(id) && document.getElementById(id).value) || '';
+    const fname = val('fname'), lname = val('lname'), phone = val('phone'), email = val('email');
+    const pdate = val('pdate'), dept = val('dept'), contactMethod = val('contactMethod'), msg = val('msg');
+    const deptLabel = (document.getElementById('dept') && document.getElementById('dept').selectedOptions[0]) ? document.getElementById('dept').selectedOptions[0].text : dept;
+    const subject = encodeURIComponent('Appointment Request - ' + fname + ' ' + lname);
+    const bodyLines = [
+      'New appointment request from the ATZ Vitalz website:',
+      '',
+      'Name: ' + fname + ' ' + lname,
+      'Phone: ' + phone,
+      'Email: ' + email,
+      'Preferred Date: ' + (pdate || 'Not specified'),
+      'Preferred Department: ' + deptLabel,
+      'Preferred Contact Method: ' + contactMethod,
+      'Message: ' + (msg || 'None provided')
+    ];
+    const body = encodeURIComponent(bodyLines.join('\n'));
+    window.location.href = 'mailto:atzvitalzmedicalcenter@gmail.com?subject=' + subject + '&body=' + body;
+    form.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+}
+
+function faqAccordion(items, idPrefix){
+  return `
+  <div class="faq-list">
+    ${items.map((f,i) => `
+      <div class="faq-item" data-idx="${idPrefix}-${i}">
+        <button class="faq-q" aria-expanded="false">
+          <span>${f.q}</span><span class="faq-plus">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>
+      </div>`).join('')}
+  </div>`;
+}
+
+function initFaqAccordions(){
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(other => {
+        if(other !== item){
+          other.classList.remove('open');
+          other.querySelector('.faq-a').style.maxHeight = null;
+          other.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        answer.style.maxHeight = null;
+        btn.setAttribute('aria-expanded','false');
+      } else {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+}
+
+function pageHeader(eyebrow, title, sub){
+  return `
+  <div class="page-header">
+    <div class="container">
+      <div class="eyebrow">${eyebrow}</div>
+      <h1 style="font-size:2.1rem;max-width:640px;">${title}</h1>
+      ${sub ? `<p style="max-width:560px;">${sub}</p>` : ''}
+    </div>
+  </div>`;
+}
+
+/* ---------- PAGES ---------- */
+
+function homePage(){
+  return `
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">ATZ Vitalz Medical Center</div>
+          <h1>Exceptional Care. Close to Home.</h1>
+          <p class="lead">At ATZ Vitalz Medical Center, we bring compassionate care, experienced medical professionals, and modern healthcare services together to help individuals and families live healthier lives.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#/appointment">Request an Appointment</a>
+            <a class="btn btn-outline" href="tel:4074129882">Call 407-412-9882</a>
+          </div>
+          <div class="hero-tags">Patient-centered care • Experienced providers • Modern medical services</div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-media-frame">
+            <img src="${IMG.hero}" alt="A physician speaking with a patient during a consultation at ATZ Vitalz Medical Center">
+            <div class="hero-badge"><div class="num">17+</div><div class="lbl">Years serving the Orlando community</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  ${heroQuickActions()}
+
+  <section class="section" style="background:var(--primary);">
+    <div class="container">
+      <div style="max-width:720px;">
+        <div class="eyebrow" style="color:#9FD4D8;">About ATZ Vitalz</div>
+        <h2 style="color:#FFFFFF;">Healthcare Built Around You</h2>
+        <p style="color:#B7D6D9;">ATZ Vitalz Medical Center brings together primary care, specialty medicine, diagnostics, and rehabilitation under one roof, so your care team can work together instead of in separate silos. From your first visit, our goal is to understand your health history and your goals, not just treat symptoms as they come up.</p>
+        <p style="color:#B7D6D9;">Our physicians, nurses, and support staff are drawn from communities across the Central Florida region, and many have practiced here for over a decade. That continuity means the person reviewing your chart today likely remembers your visit from last year.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Medical Services</div>
+        <h2>Care Across the Specialties You Need Most</h2>
+      </div>
+      <div class="grid-3">
+        ${SERVICES.slice(0,6).map(s => `
+          <div class="service-card">
+            <div class="service-icon">${s.icon}</div>
+            <h3>${s.name}</h3>
+            <p>${s.short}</p>
+            <a class="link" href="#/services/${s.slug}">Learn More →</a>
+          </div>`).join('')}
+      </div>
+      <div style="text-align:center;margin-top:32px;">
+        <a class="btn btn-primary" href="#/services">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--primary);">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow" style="color:#9FD4D8;">Featured Care Areas</div>
+        <h2 style="color:#FFFFFF;">Comprehensive Care. One Trusted Medical Center.</h2>
+      </div>
+      <div class="featured-grid">
+        ${FEATURED_SLUGS.map(slug => {
+          const s = findService(slug);
+          return `
+          <div class="featured-card">
+            <img src="${FEATURED_IMAGES[slug]}" alt="${s.name} care at ATZ Vitalz Medical Center">
+            <div class="fc-body">
+              <h3>${s.name}</h3>
+              <p>${s.short}</p>
+              <a class="link" href="#/services/${s.slug}" style="font-weight:700;color:var(--secondary);font-size:.88rem;">Learn More →</a>
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow">Why ATZ Vitalz</div>
+        <h2>Why Patients Choose ATZ Vitalz Medical Center</h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><div class="pillar-icon">🤝</div><h3>Patient-Centered Care</h3><p>We take the time to understand each patient's needs and help them navigate their care with confidence.</p></div>
+        <div class="pillar"><div class="pillar-icon">🎓</div><h3>Experienced Medical Professionals</h3><p>Our multidisciplinary team works together to provide coordinated care across a range of medical needs.</p></div>
+        <div class="pillar"><div class="pillar-icon">🏢</div><h3>Modern Healthcare Environment</h3><p>Our facilities are designed around comfort, accessibility, and an efficient patient experience.</p></div>
+        <div class="pillar"><div class="pillar-icon">💙</div><h3>Compassionate Service</h3><p>From the first phone call to follow-up care, our team is committed to treating every patient with dignity and respect.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow">Our Facility</div>
+        <h2>A Modern Medical Center Designed for Comfort</h2>
+      </div>
+      <div class="gallery">
+        <figure><img src="${IMG.reception}" alt="Reception area"><figcaption>Reception</figcaption></figure>
+        <figure><img src="${IMG.waiting}" alt="Waiting area"><figcaption>Waiting Area</figcaption></figure>
+        <figure><img src="${IMG.exam}" alt="Examination room"><figcaption>Exam Room</figcaption></figure>
+        <figure><img src="${IMG.nurse}" alt="Nurse station"><figcaption>Nurse Station</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-primary">
+    <div class="container">
+      <div class="stats-grid">
+        <div><div class="stat-num">17+</div><div class="stat-lbl">Years Serving Our Community</div></div>
+        <div><div class="stat-num">40+</div><div class="stat-lbl">Medical Providers</div></div>
+        <div><div class="stat-num">12</div><div class="stat-lbl">Specialized Care Areas</div></div>
+        <div><div class="stat-num">94%</div><div class="stat-lbl">Patient Satisfaction</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--primary);">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow" style="color:#9FD4D8;">Testimonials</div>
+        <h2 style="color:#FFFFFF;">Hear From Our Patients</h2>
+      </div>
+      <div class="testimonial-track">
+        ${TESTIMONIALS.slice(0,3).map(t => `
+          <div class="testimonial">
+            <div class="stars">${starString(t.stars)}</div>
+            <p class="quote">"${t.quote}"</p>
+            <div class="who">${t.name}</div>
+            <div class="reason">${t.reason}</div>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="appointment-section">
+    <div class="container">
+      ${appointmentFormBlock()}
+    </div>
+  </section>
+
+  ${ctaBand()}
+  `;
+}
+
+function aboutPage(){
+  return `
+  ${pageHeader('About Us','A Community-Focused Medical Center','ATZ Vitalz Medical Center has grown alongside the families it serves, from a single practice into a multi-specialty medical center.')}
+  <section class="section">
+    <div class="container">
+      <div class="intro-grid">
+        <div>
+          <h2>Our Story</h2>
+          <p>ATZ Vitalz Medical Center was founded in 2009 by a small group of physicians who believed the Orlando community deserved coordinated, personal healthcare without needing to travel outside the region for specialty services. What began as a single family practice has grown into a multi-specialty medical center with twelve care departments and more than forty providers.</p>
+          <p>Today, we serve patients throughout Orange County and the greater Central Florida region, offering everything from routine checkups to specialized diagnostic imaging, all coordinated through one connected medical record.</p>
+        </div>
+        <img src="${IMG.team}" alt="Medical team at ATZ Vitalz Medical Center">
+      </div>
+    </div>
+  </section>
+  <section class="section section-light">
+    <div class="container">
+      <div class="grid-2">
+        <div class="service-card">
+          <h3>Our Mission</h3>
+          <p>To provide compassionate, high-quality healthcare that improves the health and well-being of every patient and family we serve.</p>
+        </div>
+        <div class="service-card">
+          <h3>Our Vision</h3>
+          <p>To be the most trusted healthcare partner in the Central Florida region, known for clinical excellence and genuine, personal care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-primary">
+    <div class="container">
+      <div class="stats-grid">
+        <div><div class="stat-num">17+</div><div class="stat-lbl">Years Serving Our Community</div></div>
+        <div><div class="stat-num">40+</div><div class="stat-lbl">Medical Providers</div></div>
+        <div><div class="stat-num">12</div><div class="stat-lbl">Specialized Care Areas</div></div>
+        <div><div class="stat-num">94%</div><div class="stat-lbl">Patient Satisfaction</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head center"><div class="eyebrow">Our Facility</div><h2>Designed Around Our Patients</h2></div>
+      <div class="gallery">
+        <figure><img src="${IMG.patientRoom}" alt="Patient room"><figcaption>Patient Room</figcaption></figure>
+        <figure><img src="${IMG.diagnostic}" alt="Diagnostic imaging area"><figcaption>Diagnostic Imaging</figcaption></figure>
+        <figure><img src="${IMG.reception}" alt="Reception area"><figcaption>Reception</figcaption></figure>
+      </div>
+    </div>
+  </section>
+  ${ctaBandWrapped()}
+  `;
+}
+
+function ctaBandWrapped(){
+  return `<section class="section" style="background:var(--primary);">${`<div class="container"><div class="cta-band"><div><h2>Your Health Deserves Personalized Care.</h2><p style="max-width:480px;">Whether you're looking for routine care, exploring treatment options, or simply have a question for our team, we're here to help you take the next step.</p></div><div class="cta-actions"><a class="btn btn-primary" href="#/appointment">Request an Appointment</a><a class="btn btn-outline" href="tel:4074129882">Call 407-412-9882</a></div></div></div>`}</section>`;
+}
+
+function servicesListPage(){
+  return `
+  ${pageHeader('Services','Medical Services at ATZ Vitalz Medical Center','From everyday primary care to specialized diagnostics, our departments work together as one connected care team.')}
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        ${SERVICES.map(s => `
+          <div class="service-card">
+            <div class="service-icon">${s.icon}</div>
+            <h3>${s.name}</h3>
+            <p>${s.short}</p>
+            <a class="link" href="#/services/${s.slug}">Learn More →</a>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+  ${ctaBandWrapped()}
+  `;
+}
+
+function serviceDetailPage(slug){
+  const s = findService(slug);
+  if(!s) return notFoundPage();
+  return `
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="#/services">Services</a> / ${s.name}</div>
+      <div class="eyebrow">${s.icon} Medical Service</div>
+      <h1 style="font-size:2.1rem;">${s.name}</h1>
+      <p style="max-width:560px;">${s.short}</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="detail-grid">
+        <div>
+          <h2>Overview</h2>
+          <p>${s.overview}</p>
+          <h2>What We Treat</h2>
+          <ul class="simple-list">${s.treat.map(t => `<li>${t}</li>`).join('')}</ul>
+          <h2>What to Expect</h2>
+          <p>${s.expect}</p>
+          <h2 style="margin-top:36px;">Common Questions</h2>
+          ${faqAccordion(s.faqs, 'svc')}
+        </div>
+        <div class="side-card">
+          <h3>Request an Appointment</h3>
+          <p style="font-size:.88rem;">Ready to schedule a visit with our ${s.name} team?</p>
+          <a class="phone-big" href="tel:4074129882">407-412-9882</a>
+          <a class="btn btn-primary btn-block" href="#/appointment">Request an Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+function doctorsListPage(){
+  return `
+  ${pageHeader('Our Doctors','Meet the Team Behind Your Care','Our physicians and specialists work together across departments so your care always feels connected.')}
+  <section class="section">
+    <div class="container">
+      <div class="grid-4">
+        ${DOCTORS.map(d => `
+          <div class="doctor-card">
+            <img class="doctor-photo" src="${d.photo}" alt="Portrait of ${d.name}">
+            <div class="doctor-body">
+              <h3>${d.name}</h3>
+              <div class="doctor-specialty">${d.specialty}</div>
+              <p>${d.position}</p>
+              <a class="link" href="#/doctors/${d.id}" style="font-weight:700;color:var(--secondary);font-size:.85rem;">View Profile →</a>
+            </div>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+  ${ctaBandWrapped()}
+  `;
+}
+
+function doctorDetailPage(id){
+  const d = findDoctor(id);
+  if(!d) return notFoundPage();
+  const service = SERVICES.find(s => s.slug === d.dept);
+  return `
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="#/doctors">Our Doctors</a> / ${d.name}</div>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="detail-grid">
+        <div>
+          <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;">
+            <img class="detail-photo" style="width:220px;height:220px;flex-shrink:0;" src="${d.photo}" alt="Portrait of ${d.name}">
+            <div>
+              <h1 style="font-size:1.8rem;margin-bottom:4px;">${d.name}</h1>
+              <div class="eyebrow" style="margin-bottom:2px;">${d.position}</div>
+              <p style="color:var(--secondary);font-weight:700;">${d.specialty}</p>
+              <div class="tag-list">${d.languages.map(l => `<span class="tag">${l}</span>`).join('')}</div>
+            </div>
+          </div>
+          <h2>Biography</h2>
+          <p>${d.bio}</p>
+          <h2>Education</h2>
+          <ul class="simple-list">${d.education.map(e => `<li>${e}</li>`).join('')}</ul>
+          <h2>Clinical Interests</h2>
+          <ul class="simple-list">${d.expertise.map(e => `<li>${e}</li>`).join('')}</ul>
+        </div>
+        <div class="side-card">
+          <h3>Request an Appointment</h3>
+          <dl class="info-list">
+            <dt>Department</dt><dd>${service ? service.name : d.specialty}</dd>
+            <dt>Languages</dt><dd>${d.languages.join(', ')}</dd>
+          </dl>
+          <a class="phone-big" href="tel:4074129882">407-412-9882</a>
+          <a class="btn btn-primary btn-block" href="#/appointment">Request an Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+function patientsPage(){
+  return `
+  ${pageHeader('Patients & Visitors','Preparing for Your Visit','Everything you need to know before, during, and after your appointment at ATZ Vitalz Medical Center.')}
+  <section class="section">
+    <div class="container">
+      <div class="accordion-plain">
+        <h3>Before Your Appointment</h3>
+        <p>New patients are asked to arrive fifteen minutes early to complete registration paperwork. If you'd like to save time, you can call ahead and ask our front desk team to email you the forms in advance.</p>
+
+        <h3>What to Bring</h3>
+        <ul class="simple-list">
+          <li>A valid photo ID</li>
+          <li>Your insurance card, if applicable</li>
+          <li>A list of current medications and dosages</li>
+          <li>Any relevant prior medical records or referral paperwork</li>
+        </ul>
+
+        <h3>Visitor Information</h3>
+        <p>We welcome one or two support visitors per patient in most areas of the medical center. Some departments, such as diagnostic imaging, may have specific visitor guidelines to protect patient privacy and safety, which our staff will explain on arrival.</p>
+
+        <h3>Preparing for Your Visit</h3>
+        <p>If your appointment involves lab work or imaging, our scheduling team will let you know if any fasting or preparation is required. For general visits, no special preparation is typically needed beyond your usual medications.</p>
+
+        <h3>Billing & Insurance</h3>
+        <p>Insurance participation varies by plan, so we recommend calling 407-412-9882 to confirm your coverage before your visit. Our billing team is also available to answer questions about statements or payment plans.</p>
+
+        <h3>Patient Rights</h3>
+        <p>Every patient at ATZ Vitalz Medical Center has the right to considerate, respectful care, clear information about their diagnosis and treatment options, and the ability to participate in decisions about their own care. A full copy of our patient rights policy is available at the front desk.</p>
+
+        <h3>Accessibility</h3>
+        <p>Our facility includes accessible parking, entrances, exam rooms, and restrooms. If you need any additional accommodations for your visit, please let our scheduling team know in advance so we can prepare.</p>
+      </div>
+
+      <h2 style="margin-top:44px;">Frequently Asked Questions</h2>
+      ${faqAccordion(GENERAL_FAQS, 'patients')}
+      <p style="font-size:.85rem;color:var(--text-soft);margin-top:10px;">If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.</p>
+    </div>
+  </section>
+  ${ctaBandWrapped()}
+  `;
+}
+
+function resourcesListPage(){
+  return `
+  ${pageHeader('Health Resources','Health Education & Resources','Practical, easy-to-understand articles to help you stay informed between visits.')}
+  <section class="section">
+    <div class="container">
+      <div class="list-page-grid">
+        ${ARTICLES.map(a => `
+          <a href="#/resources/${a.slug}" class="article-card" style="display:block;">
+            <img src="${a.image}" alt="${a.title}">
+            <div class="article-body">
+              <h3>${a.title}</h3>
+              <p>${a.excerpt}</p>
+            </div>
+          </a>`).join('')}
+      </div>
+    </div>
+  </section>
+  ${ctaBandWrapped()}
+  `;
+}
+
+function articleDetailPage(slug){
+  const a = findArticle(slug);
+  if(!a) return notFoundPage();
+  return `
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="#/resources">Health Resources</a> / ${a.title}</div>
+      <h1 style="font-size:2rem;max-width:640px;">${a.title}</h1>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div style="max-width:760px;">
+        <img src="${a.image}" alt="${a.title}" style="border-radius:var(--radius-m);height:340px;width:100%;object-fit:cover;margin-bottom:28px;">
+        <p style="font-size:1.02rem;">${a.body}</p>
+        <p style="font-size:.8rem;color:var(--text-soft);margin-top:30px;">This article is for general educational purposes and is not a substitute for medical advice. Talk with your provider about your specific health needs.</p>
+        <a class="btn btn-outline" href="#/resources">← Back to Health Resources</a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+function contactPage(){
+  return `
+  ${pageHeader('Contact','Get in Touch With Our Team','We are here to help with appointments, billing questions, and general inquiries.')}
+  <section class="section">
+    <div class="container">
+      <div class="grid-3" style="margin-bottom:44px;">
+        <div class="service-card"><h3>📞 Call Us</h3><p>Speak with our scheduling team directly.</p><a class="link" href="tel:4074129882">407-412-9882</a></div>
+        <div class="service-card"><h3>✉️ Email Us</h3><p>Send a general question to our front office.</p><a class="link" href="mailto:atzvitalzmedicalcenter@gmail.com" aria-label="Email us">Send an Email →</a></div>
+        <div class="service-card"><h3>📍 Get Directions</h3><p>5500 Kingswood Dr<br>Orlando, FL 32810</p><a class="link" href="#/contact">View on map below →</a></div>
+      </div>
+      <div style="border-radius:var(--radius-m);overflow:hidden;height:320px;margin-bottom:56px;box-shadow:var(--shadow-soft);">
+        <iframe title="Map showing the fictional demo location of ATZ Vitalz Medical Center" width="100%" height="100%" style="border:0;" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-81.42%2C28.55%2C-81.28%2C28.65&layer=mapnik"></iframe>
+      </div>
+      ${appointmentFormBlock()}
+    </div>
+  </section>
+  `;
+}
+
+function appointmentPage(){
+  return `
+  ${pageHeader('Request an Appointment','Schedule Your Visit','Tell us a little about what you need and our scheduling team will follow up to confirm the details.')}
+  <section class="section">
+    <div class="container">
+      ${appointmentFormBlock()}
+    </div>
+  </section>
+  `;
+}
+
+function insurancePage(){
+  return `
+  ${pageHeader('Insurance & Billing','Insurance & Billing','Understanding your coverage before your visit helps avoid surprises later.')}
+  <section class="section">
+    <div class="container">
+      <p style="max-width:680px;">Insurance participation varies by plan and can change from year to year, so we recommend calling 407-412-9882 to confirm your coverage before your visit. Below are common categories of coverage our patients typically ask about.</p>
+      <div class="grid-3">
+        <div class="service-card"><h3>Employer-Sponsored Plans</h3><p>Many patients are covered through a workplace health plan. Bring your insurance card so our team can verify your benefits.</p></div>
+        <div class="service-card"><h3>Marketplace Plans</h3><p>Coverage details for marketplace plans vary widely by tier and provider network.</p></div>
+        <div class="service-card"><h3>Government Programs</h3><p>Our billing team can help you understand how government-sponsored coverage applies to your visit.</p></div>
+      </div>
+      <p style="margin-top:30px;font-weight:700;color:var(--primary);">Call 407-412-9882 to confirm coverage before your visit.</p>
+    </div>
+  </section>
+  `;
+}
+
+function legalPage(title, body){
+  return `
+  ${pageHeader('Legal', title)}
+  <section class="section">
+    <div class="container">
+      <div style="max-width:760px;">${body}</div>
+    </div>
+  </section>`;
+}
+
+function notFoundPage(){
+  return `
+  <section class="section">
+    <div class="container" style="text-align:center;padding:60px 0;">
+      <h1>Page Not Found</h1>
+      <p>We couldn't find the page you were looking for.</p>
+      <a class="btn btn-primary" href="#/">Return Home</a>
+    </div>
+  </section>`;
+}
+
+/* ---------- ROUTER ---------- */
+
+function render(){
+  const hash = location.hash || '#/';
+  const path = hash.replace('#','');
+  const parts = path.split('/').filter(Boolean);
+  let html = '';
+
+  if(parts.length === 0){
+    html = homePage();
+  } else if(parts[0] === 'about'){
+    html = aboutPage();
+  } else if(parts[0] === 'services' && parts.length === 1){
+    html = servicesListPage();
+  } else if(parts[0] === 'services' && parts.length === 2){
+    html = serviceDetailPage(parts[1]);
+  } else if(parts[0] === 'doctors' && parts.length === 1){
+    html = doctorsListPage();
+  } else if(parts[0] === 'doctors' && parts.length === 2){
+    html = doctorDetailPage(parts[1]);
+  } else if(parts[0] === 'patients'){
+    html = patientsPage();
+  } else if(parts[0] === 'resources' && parts.length === 1){
+    html = resourcesListPage();
+  } else if(parts[0] === 'resources' && parts.length === 2){
+    html = articleDetailPage(parts[1]);
+  } else if(parts[0] === 'contact'){
+    html = contactPage();
+  } else if(parts[0] === 'appointment'){
+    html = appointmentPage();
+  } else if(parts[0] === 'insurance'){
+    html = insurancePage();
+  } else if(parts[0] === 'privacy'){
+    html = legalPage('Privacy Policy', `
+      <p>ATZ Vitalz Medical Center is committed to protecting the privacy and confidentiality of patient information. We collect only the information needed to provide safe, coordinated care and to operate our website effectively, and we do not sell patient information to third parties.</p>
+      <p>Information submitted through our appointment and contact forms is used solely to respond to your request and schedule care. Medical records are maintained and disclosed in accordance with applicable federal and state health privacy law, including HIPAA.</p>
+      <p>If you have questions about how your information is used, please contact our privacy office at 407-412-9882 or atzvitalzmedicalcenter@gmail.com.</p>`);
+  } else if(parts[0] === 'terms'){
+    html = legalPage('Terms of Use', `
+      <p>By using this website, you agree to use it for lawful, personal, and informational purposes only. Content on this site, including text, images, and design elements, is the property of ATZ Vitalz Medical Center and may not be reproduced without permission.</p>
+      <p>This website is provided for general information and does not replace a medical evaluation. Always consult a qualified provider regarding your specific health needs, and call 911 or go to the nearest emergency department for medical emergencies.</p>
+      <p>ATZ Vitalz Medical Center may update these terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated terms.</p>`);
+  } else if(parts[0] === 'accessibility'){
+    html = legalPage('Accessibility', `
+      <p>ATZ Vitalz Medical Center is committed to making our website and facilities accessible to all patients and visitors, including those with disabilities. Our site is built with accessible navigation, readable text sizing, and descriptive labeling throughout.</p>
+      <p>Our physical campus includes accessible parking, entrances, exam rooms, and restrooms. If you need an accommodation for an upcoming visit, or if you experience difficulty using any part of this website, please call 407-412-9882 and our team will assist you.</p>`);
+  } else if(parts[0] === 'notice'){
+    html = legalPage('Notice of Privacy Practices', `
+      <p>This notice describes how your medical information may be used and disclosed, and how you can access that information. ATZ Vitalz Medical Center is required by law to maintain the privacy of your health information and to provide you with this notice of our legal duties and privacy practices.</p>
+      <p>We may use and disclose your health information for treatment, payment, and healthcare operations, and as otherwise permitted or required by law. You have the right to request access to your records, request corrections, and receive an accounting of certain disclosures.</p>
+      <p>For questions about this notice or to exercise your rights, contact our health information office at 407-412-9882.</p>`);
+  } else {
+    html = notFoundPage();
+  }
+
+  app.innerHTML = html;
+  window.scrollTo(0,0);
+  initApptForm();
+  initFaqAccordions();
+  highlightNav(parts[0] || '');
+}
+
+function highlightNav(section){
+  document.querySelectorAll('nav.main-nav a').forEach(a => {
+    const r = a.getAttribute('data-route');
+    const active = (r === '/' && section === '') || (r !== '/' && section === r.replace('/',''));
+    a.classList.toggle('active', active);
+  });
+}
+
+window.addEventListener('hashchange', render);
+window.addEventListener('DOMContentLoaded', render);
+
+/* mobile menu */
+document.getElementById('hamburgerBtn').addEventListener('click', () => {
+  document.getElementById('mobilePanel').classList.add('open');
+});
+document.getElementById('closePanelBtn').addEventListener('click', () => {
+  document.getElementById('mobilePanel').classList.remove('open');
+});
+document.querySelectorAll('.mobile-panel a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobilePanel').classList.remove('open'));
+});
+
+/* If a hotlinked photo fails to load, swap in a branded placeholder built entirely in-page (no network call), so nothing ever shows as a blank/broken box. */
+const FALLBACK_IMG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='700' viewBox='0 0 900 700'%3E%3Crect width='900' height='700' fill='%23F3F8F9'/%3E%3Ccircle cx='450' cy='300' r='70' fill='none' stroke='%235FB3B3' stroke-width='6'/%3E%3Cpath d='M450 265v70M415 300h70' stroke='%235FB3B3' stroke-width='10' stroke-linecap='round'/%3E%3Ctext x='450' y='430' font-family='Arial,sans-serif' font-size='22' fill='%232A7F8E' text-anchor='middle'%3EATZ Vitalz Medical Center%3C/text%3E%3C/svg%3E";
+document.addEventListener('error', function(e){
+  const t = e.target;
+  if(t && t.tagName === 'IMG' && !t.dataset.fallbackApplied){
+    t.dataset.fallbackApplied = '1';
+    t.src = FALLBACK_IMG;
+  }
+}, true);
+
+render();
+
+</script>
+</body>
+</html>
